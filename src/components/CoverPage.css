@@ -1,0 +1,16 @@
+#cover-image {
+  max-width: 100%;
+  max-height: auto;
+
+  filter: blur(8px);
+}
+
+#cover-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Arial Black";
+  font-size: 4em;
+  color: antiquewhite;
+}
