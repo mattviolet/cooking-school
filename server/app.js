@@ -26,7 +26,7 @@ var courseRouter = require("./routes/courses");
 var app = express();
 
 //serve up the public folder
-const publicPath = path.join(__dirname, "..", "public");
+const publicPath = path.join(__dirname, "../build");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
