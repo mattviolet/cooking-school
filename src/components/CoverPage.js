@@ -4,8 +4,14 @@ import "./CoverPage.css";
 
 const CoverPage = () => (
   <div>
-    <img id="cover-image" src={CoverImage} />
-    <div id="cover-text">Matt's Cooking School</div>
+    <div class="container">
+      <div className="bg-image">
+        <img id="cover-image" src={CoverImage} />
+      </div>
+      <div className="bg-text">
+        <h1>Killian Street Cooking School</h1>
+      </div>
+    </div>
   </div>
 );
 

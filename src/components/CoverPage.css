@@ -1,8 +1,16 @@
-#cover-image {
-  max-width: 100%;
-  max-height: auto;
+.container {
+  position: relative;
+}
 
-  filter: blur(8px);
+#cover-image {
+  width: 100%;
+  height: auto;
+
+  opacity: 0.7;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #cover-text {
@@ -12,5 +20,25 @@
   transform: translate(-50%, -50%);
   font-family: "Arial Black";
   font-size: 4em;
-  color: antiquewhite;
+  color: rgb(158, 130, 93);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
 }
