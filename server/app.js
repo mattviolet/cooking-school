@@ -1,6 +1,7 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
+var port = process.env.PORT || 3000;
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
@@ -24,6 +25,9 @@ var courseRouter = require("./routes/courses");
 
 var app = express();
 
+//serve up the public folder
+const publicPath = path.join(__dirname, "..", "public");
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
@@ -33,7 +37,15 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(publicPath));
+
+app.listen(port, () => {
+  console.log(`Server is up on port${port}!`);
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(publicPath, "index.html"));
+});
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

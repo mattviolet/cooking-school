@@ -4,8 +4,6 @@ let express = require("express");
 let router = express.Router();
 
 //et accounts = AccountModel.accounts;
-
-console.log("hey im here!");
 //console.log(accounts);
 
 //GET an account
