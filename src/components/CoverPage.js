@@ -4,7 +4,7 @@ import "./CoverPage.css";
 
 const CoverPage = () => (
   <div>
-    <div class="container">
+    <div className="container">
       <div className="bg-image">
         <img id="cover-image" src={CoverImage} />
       </div>

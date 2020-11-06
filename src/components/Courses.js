@@ -13,7 +13,7 @@ class Courses extends Component {
 
   async componentDidMount() {
     //call api to get courses
-    const url = "http://localhost:9000/courses";
+    const url = "http://localhost:5000/courses";
     const response = await fetch(url);
     const data = await response.json();
     //set new state
