@@ -43,7 +43,7 @@ app.listen(port, () => {
   console.log(`Server is up on port${port}!`);
 });
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
 
